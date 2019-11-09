@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello Kinect!</title>
+    <script src="azure-app.js" type="text/Javascript"></script>
+  </head>
+  <body>
+    <h1>Hello Kinect!</h1>
+    We are using Node.js <span id="node-version"></span>,
+    Chromium <span id="chrome-version"></span>,
+    and Electron <span id="electron-version"></span>.
+    
+    <br><br><br>
+
+    <form>
+        <textarea id="incoming"></textarea>
+        <button type="submit">submit</button>
+    </form>
+
+    <button id="startD">start depth</button>
+    <br><br>
+    <button id="stopD">stop depth</button>
+    <br><br><br>
+
+    <!-- resolution specs for kinect azure -->
+    <!-- https://docs.microsoft.com/en-us/azure/kinect-dk/hardware-specification -->
+    <canvas id="input-canvas" width="320" height="288"></canvas>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+  </body>
+</html>

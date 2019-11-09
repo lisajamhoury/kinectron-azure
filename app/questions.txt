@@ -1,0 +1,20 @@
+Kinect Azure Open Questions 
+
+Why BGRA Color configuration 
+
+MKV file does not accept BGRA for color type. But BGRA is what is needed to make color 3D in viewer. 
+Can you record registered color and depth?
+https://docs.microsoft.com/en-us/azure/kinect-dk/record-file-format
+
+Kinect color camera doesn't natively produce bgra and doesn't use the alpha channel in this format. So why is it needed in the viewer?
+
+The color camera does not natively produce BGRA32 images. Setting K4A_IMAGE_FORMAT_COLOR_BGRA32 for color_format will result in higher CPU utilization. 
+https://microsoft.github.io/Azure-Kinect-Sensor-SDK/master/structk4a__device__configuration__t_a89d4e4703550d607e4fc3a8cce5b30ed.html#a89d4e4703550d607e4fc3a8cce5b30ed
+
+
+
+What is the difference between binned and unbinned for depth 
+https://microsoft.github.io/Azure-Kinect-Sensor-SDK/master/group___enumerations_ga3507ee60c1ffe1909096e2080dd2a05d.html#ga3507ee60c1ffe1909096e2080dd2a05d
+
+nv12 
+yuy2
